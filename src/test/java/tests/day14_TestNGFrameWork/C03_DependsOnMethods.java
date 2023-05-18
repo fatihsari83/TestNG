@@ -1,4 +1,4 @@
-package day14_TestNGFrameWork;
+package tests.day14_TestNGFrameWork;
 
 import org.testng.Assert;
 import org.testng.annotations.Ignore;
