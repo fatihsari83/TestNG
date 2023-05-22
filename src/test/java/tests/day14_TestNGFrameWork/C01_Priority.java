@@ -25,7 +25,7 @@ public class C01_Priority {
         System.out.println("Wise Quarter");
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void amazonTesti(){ // priority yazılmazsa 0 degeri alır
         System.out.println("Amazon");
     }
