@@ -8,7 +8,7 @@ import utilities.Driver;
 
 public class C02_qualityDemyLoginTest {
 
-    @Test(groups = "smoke")
+    @Test
     public void test01(){
 
         // QUALİTYDEMY anasayfaya gidin

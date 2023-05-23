@@ -14,6 +14,16 @@
  <suite name="Istenen gruplari calistirma">
      <test name="smoke test">
 
+          <groups>
+               <run>
+                    <include name="minireg1"></include>
+                    <exclude name="smoke"></exclude>
+               </run>
+          </groups>
+             <packages>
+                  <package name="tests.*"></package>
+             </packages>
+
 
 
 

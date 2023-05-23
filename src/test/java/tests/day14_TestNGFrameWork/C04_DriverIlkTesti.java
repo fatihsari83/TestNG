@@ -12,7 +12,7 @@ public class C04_DriverIlkTesti {
         static yollarla ulasabilecegimiz bir method kullanilmasi tercih edilmistir.
      */
 
-    @Test
+    @Test(groups = "smoke")
     public void test01(){
 
         // amazon ana sayfaya gidin
