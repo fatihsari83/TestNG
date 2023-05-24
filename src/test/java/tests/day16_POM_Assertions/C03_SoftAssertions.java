@@ -6,6 +6,7 @@ import org.testng.asserts.SoftAssert;
 
 public class C03_SoftAssertions {
 
+    SoftAssert softAssert = new SoftAssert();
     @Test
     public void hardAssertion(){
         /*
@@ -42,11 +43,20 @@ public class C03_SoftAssertions {
             Failed olan assertion'lari kolaylikla bulabilmemiz icin
          */
         int sayi = 36;
-        SoftAssert softAssert = new SoftAssert();
+        //SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(sayi % 2 == 0,"sayi cift olmali"); // sayi cift mi
         softAssert.assertTrue(sayi>100,"sayi 100'den buyuk olmali"); // sayi 100'den buyuk mu ?
         softAssert.assertTrue(sayi < 1000,"sayi 1000'den kucuk olmalio"); // sayi 1000'den kucuk mu ?
         softAssert.assertFalse(sayi % 3 == 0,"Sayi 3'e bolunememeli"); // sayinin 3 ile bolunemedigini test edin
         softAssert.assertAll();
     }
+
+    @Test
+    public void denemeTesti(){
+
+
+
+    }
+
+
 }

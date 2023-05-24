@@ -18,6 +18,9 @@ public class QualitydemyPage {
     @FindBy(xpath = "//*[text()='Log in']")
     public WebElement ilkloginLinki;
 
+    @FindBy (xpath ="//a[text()='Accept']")
+    public WebElement cookiesElementi;
+
     @FindBy(xpath = "//input[@name='email']")
     public WebElement emailKutusu;
 

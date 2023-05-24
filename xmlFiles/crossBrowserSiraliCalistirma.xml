@@ -1,0 +1,66 @@
+<!---
+    Cross browser calistirdigimiz testlerin hepsini ayni browser ile
+    calistirmak yerine uygun gordugumuz parcalara ayırip,
+    her bir parcayi farkli browser ile calistirmak demektir.
+
+    xml dosyasindan calistirdigimiz testler sirasiyla calisir.
+    Her test driver class indan gelen driver i kullanir.
+    Driver classi da driver objesini olustururken hangi browserin
+    kullanacagi bilgisini configuration.properties dosyasindan alir.
+
+    standart xml dosyasi, standart class lar ve
+    standart olarak kullandigimiz Driver class i ile
+    Cross Browser test YAPMAK MUMKUN DEGILDIR.
+
+    Cross browser cok ozel bir islem oldugunudan
+    tum classlar ıcın degil belirlenmis az sayida
+    class icin uygulanir.
+
+    Cross browser ile test yapmak icin
+    calisan sistemde degisiklik yapmak zorundayiz.
+
+    1- baslangic noktamiz xml dosyasi oldugu icin
+    degisiklige buradan basliyoruz.
+
+      -->
+
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Istenen class'lari calistiralim">
+    <test name="chrome test">
+         <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.day19_CrossBrowserTesting.C01_AmazonSearch"></class>
+            <class name="tests.day19_CrossBrowserTesting.C02_AlertsTesti"></class>
+            <class name="tests.day19_CrossBrowserTesting.C03_BasicAuthentication"></class>
+
+        </classes>
+
+
+    </test>
+    <test name="firefox test">
+         <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="tests.day19_CrossBrowserTesting.C01_AmazonSearch"></class>
+            <class name="tests.day19_CrossBrowserTesting.C02_AlertsTesti"></class>
+            <class name="tests.day19_CrossBrowserTesting.C03_BasicAuthentication"></class>
+
+        </classes>
+
+
+    </test>
+    <test name="edge test">
+         <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="tests.day19_CrossBrowserTesting.C01_AmazonSearch"></class>
+            <class name="tests.day19_CrossBrowserTesting.C02_AlertsTesti"></class>
+            <class name="tests.day19_CrossBrowserTesting.C03_BasicAuthentication"></class>
+
+        </classes>
+
+
+    </test>
+
+
+</suite>

@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class AmazonPage {
 
     // page class lari surekli kullandıgimiz locate islemleri
@@ -29,6 +31,12 @@ public class AmazonPage {
 
     @FindBy(xpath = "(//div[@class='sg-col-inner'])[1]")
     public WebElement aramaSonucuElementi;
+
+    @FindBy (xpath = "//table/tbody/tr")
+    public List<WebElement> satirSayisiElementi;
+
+    @FindBy (xpath = "//table/tbody/tr[1]/td")
+    public List <WebElement> sutunSayisiElementi;
 
 
 

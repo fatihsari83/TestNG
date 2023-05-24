@@ -8,13 +8,15 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
     public class C06_QualitydemyNegatifLoginTesti {
+
         @Test
         public void gecersizIsimSifreTesti(){
             // QUALITYDEMY ANA SAYFAYA GIDIN
             Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
             // login linkine tiklayin
-            QualitydemyPage qualitydemyPage = new QualitydemyPage();
-            qualitydemyPage.ilkloginLinki.click();
+           QualitydemyPage qualitydemyPage = new QualitydemyPage();
+            //qualitydemyPage.cookiesElementi.submit();
+            qualitydemyPage.ilkloginLinki.submit();
             // gecersiz username ve sifre yi ilgili kutulara yazin
             qualitydemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
             qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
@@ -31,7 +33,7 @@ import utilities.Driver;
             Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
             // login linkine tiklayin
             QualitydemyPage qualitydemyPage = new QualitydemyPage();
-            qualitydemyPage.ilkloginLinki.click();
+            qualitydemyPage.ilkloginLinki.submit();
             // gecersiz username ve gecerli sifre yi ilgili kutulara yazin
             qualitydemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
             qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
@@ -48,7 +50,7 @@ import utilities.Driver;
             Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
             // login linkine tiklayin
             QualitydemyPage qualitydemyPage = new QualitydemyPage();
-            qualitydemyPage.ilkloginLinki.click();
+            qualitydemyPage.ilkloginLinki.submit();
             // gecerli username ve gecersiz sifre yi ilgili kutulara yazin
             qualitydemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
             qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));

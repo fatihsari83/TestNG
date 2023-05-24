@@ -127,4 +127,16 @@ public class ReusableMethods {
         });
         return element;
     }
+
+    public static int doluSutunSayisiHesapla(List <WebElement> sutunSayisiListesi) {
+
+        int yaziliSutunSayisi=0;
+        for (WebElement eachElement: sutunSayisiListesi
+        ) {
+            if (!eachElement.getText().isEmpty()){
+                yaziliSutunSayisi++;
+            }
+        }
+        return yaziliSutunSayisi;
+    }
 }
